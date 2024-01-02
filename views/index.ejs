@@ -20,7 +20,7 @@
     <%} %>
     <h2><%= date  %> In History</h2>
     <div class="content">
-        <img src="/resources/historical_img1.jpg" alt="trees" class="decor-img">
+        <img src="/resources/historical_img<%=imageNum%>.jpg" alt="trees" class="decor-img">
         <% events.forEach(event => {%>
 
         <h4><%=event.year  %></h4>

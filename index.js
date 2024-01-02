@@ -20,17 +20,23 @@ app.get("/", async (req, res)=>{
     const currentDate = new Date();
     const day = currentDate.getDate();
     const month = currentDate.getMonth() +1;
-    const response = await axios.get(API_URL + `${month}/${day}/events.json`);
-    const {wikipedia, date, events} = response.data;
-    res.render("index.ejs", {link: wikipedia, date: "Today", events: events, message:message, year: year});
+    const randomNumber = Math.floor((Math.random()*5) +1);
+
+    try {
+        const response = await axios.get(API_URL + `${month}/${day}/events.json`);
+        const {wikipedia, date, events} = response.data;
+        res.render("index.ejs", {link: wikipedia, date: "Today", events: events, message:message, year: year, imageNum: randomNumber});
+    } catch (err){
+        res.send({message: "error while fetching data"});
+    }
 });
 app.post("/submit", async (req, res)=>{
     const {month, day} = req.body
-    
+    const randomNumber = Math.floor((Math.random()*5) +1);
     try{const response = await axios.get(API_URL + `${month}/${day}/events.json`);
         // console.log(response.data);
         const {wikipedia, date, events} = response.data;
-        res.render("index.ejs", {link: wikipedia, date: `${getMonth(parseInt(month))} ${day}` , events: events, year:year});}
+        res.render("index.ejs", {link: wikipedia, date: `${getMonth(parseInt(month))} ${day}` , events: events, year:year, imageNum: randomNumber});}
     catch {
         message = "Invalid input. Verify your input and try again."
         res.redirect("/");
