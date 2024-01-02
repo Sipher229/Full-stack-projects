@@ -28,6 +28,7 @@ app.get("/", async (req, res)=>{
         res.render("index.ejs", {link: wikipedia, date: "Today", events: events, message:message, year: year, imageNum: randomNumber});
     } catch (err){
         res.send({message: "error while fetching data"});
+        console.error(err.message);
     }
 });
 app.post("/submit", async (req, res)=>{
