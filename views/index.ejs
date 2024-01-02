@@ -1,0 +1,40 @@
+<%-include("partials/header.ejs") %>
+<main>
+    <div class="container">
+    <hr />
+    <div class="top-box">
+        <h6>Choose a day and month:</h6>
+    <form action="/submit" method="post">
+        <div class="wrap-form">
+            <label for="month">Month:
+            <select name="month" id="month"></select>
+            </label>
+            <label for="day">Day:
+            <select name="day" id="day"></select>
+            </label>
+            <button type="submit" class="done-btn"> Done</button>
+        </div>
+    </form>
+    <% if (locals.message) {%>
+    <small style="color: #fe0202; font-size: 10px;"> <%= message %> </small>
+    <%} %>
+    <h2><%= date  %> In History</h2>
+    <div class="content">
+        <img src="/resources/historical_img1.jpg" alt="trees" class="decor-img">
+        <% events.forEach(event => {%>
+
+        <h4><%=event.year  %></h4>
+        <p> <%= event.description %> </p>
+        <a href="<%= link %>" target="_blank" style="color: #ffffff;">read more</a>
+        <%}); %>
+
+        <p>Find out more about the above events <span><a href="<%= link %>" target="_blank" style="color: #ffffff;">here</a></span></p>
+    </div>
+    </div>
+    <a href="#home" class="nav-btn">Top</a>
+    </div>
+
+    
+        
+</main>
+<%-include("partials/footer.ejs") %>

@@ -1,0 +1,25 @@
+<footer>© Copyright <%=year%> Philippe Neri Singizwa</footer> 
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    const months = $("#month");
+    const days = $("#day");
+    function populateMonths(){
+        for (let i = 1; i<13; i++){
+            $(`<option>${i}</option>`).attr({value: i}).appendTo(months);
+        }
+    }
+    populateMonths();
+    function addValue(i){
+        $("option").attr({value: i});
+    }
+
+    function populateDays(){
+        for (let x= 1; x<32; x++){ 
+            $(`<option>${x}</option>`).attr({value: x}).appendTo(days);
+        }
+    }
+    populateDays();
+</script>
+</body>
+</html>

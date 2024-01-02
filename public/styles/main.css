@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Rubik+Lines&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,300&family=Noto+Serif&family=Rubik+Lines&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #31304D;
+    scroll-behavior: smooth;
+}
+header{
+    padding: 0px 5rem;
+
+}
+hr{
+    color: #dddddd;
+}
+
+nav h1{
+    color: #ffffff;
+    font-family: "Noto serif";
+    text-decoration: wavy;
+}
+main{
+    padding: 0rem 5rem;
+}
+
+
+.top-box{
+    width: auto;
+    color: #ffffff;
+    font-family: "Noto serif";
+}
+.top-box h6{
+    margin: 6px 6px;
+}
+.top-box p{
+    /* width: 30rem; */
+    position: relative;
+}
+.bottom-box{
+    width: 80%;
+    height: 10rem;
+}
+.decor-img{
+    width: 40rem;
+    height: 19rem;
+}
+.content{
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.wrap-form{
+    color: #ffffff;
+    border: 1px solid #dddddd;
+    width: 18rem;
+    height: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #161A30;
+    font-family: "Mulish";
+
+}
+.done-btn{
+    border-radius: 10px;
+    background-color: #161A30;
+    color: #ffffff;
+    cursor: pointer;
+}
+.done-btn:hover{
+    opacity: 0.85;
+}
+
+select{
+    background-color: #31304D;
+    border-radius: 8px;
+    color: #ffffff;
+}
+
+footer{
+    padding: 3rem 5rem;
+    color: #ffffff;
+    font-family: "Mulish";
+    font-size: xx-small;
+}
+.nav-btn{
+    width: 3.3rem;
+    height: 3.3rem;
+    background-color: #ffffff;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border:1px solid #161A30;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
