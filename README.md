@@ -2,7 +2,7 @@
 This website allows the user to find out what happened on a particular date in history. The website fetches the data from 
 a API called [Swager](https://byabbe.se/on-this-day/#/).
 
-To run this website, run
+To run this website, clone this repository, run
 `npm install`
 to install all the node packages,
 and then run
